@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>Banco · Login</title>
+
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="login.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main class="main">
+      <div class="main__overlay"></div>
+      <div class="content">
+        <form onsubmit="onFormSubmit(event)">
+          <img
+            class="content__logo"
+            src="../../assets/img/cat-solid-white.svg"
+            alt=""
+          />
+          <h1 class="content__title">Fazer login</h1>
+
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control cpf-input"
+              id="cpfInput"
+              placeholder="nome@exemplo.com"
+            />
+            <label for="cpfInput">CPF</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control password-input"
+              id="passwordInput"
+              placeholder="Senha"
+            />
+            <label for="passwordInput">Senha</label>
+          </div>
+
+          <button class="w-100 btn btn-lg btn-primary" type="submit">
+            Entrar
+          </button>
+        </form>
+      </div>
+    </main>
+    <script type="text/javascript">
+      const onFormSubmit = e => {
+        e.preventDefault()
+
+        window.location.href = '/pages/dashboard'
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #ffffff;
+  padding-left: 280px;
+
+  transition: padding ease 300ms;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 280px;
+  padding: 16px;
+
+  background-color: #212529;
+  color: #ffffff;
+
+  transition: left ease 300ms;
+}
+
+.content {
+  padding: 16px;
+  padding-top: 24px;
+
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: baseline;
+}
+
+.sidebar-header img {
+  width: 38px;
+  margin-right: 8px;
+}
+
+.sidebar-header span {
+  font-size: 24px;
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  justify-content: center;
+}
+
+.sidebar-navigation li:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.sidebar-navigation .nav-link {
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.sidebar-navigation .nav-link i {
+  margin-right: 8px;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.btn-toggle {
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: transparent;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #d2f4ea;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+}
+
+.btn-toggle[aria-expanded='true'] {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.btn-toggle[aria-expanded='true']::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  padding: 0.1875rem 0.5rem;
+  margin-top: 0.125rem;
+  margin-left: 1.25rem;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: #d2f4ea;
+}
+
+.page-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.page-header h1 i {
+  margin-right: 4px;
+}
+
+.value-expose {
+  display: flex;
+  flex-direction: column;
+
+  margin: 24px 0 16px;
+}
+
+.value-expose span {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 500;
+
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.value-expose p {
+  color: #333333;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+.preview-card {
+  min-height: 100%;
+}
+
+.preview-card .bi {
+  font-size: 28px;
+}
+
+.invest-objective {
+  margin-bottom: 32px;
+}
+
+.invest-objective h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.action-btn {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-left: 0px;
+  }
+
+  .sidebar {
+    z-index: 100;
+    left: -280px;
+  }
+
+  .main.main--sidebar-open .sidebar {
+    left: 0;
+  }
+}
