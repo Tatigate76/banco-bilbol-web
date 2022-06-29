@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-image: url('../../assets/img/cat-1.jpeg');
+  background-position: 0% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: #000000;
+  opacity: 0.6;
+
+  z-index: 1;
+}
+
+.content {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+
+  text-align: center;
+  z-index: 2;
+}
+
+.content__logo {
+  width: 100px;
+
+  margin-bottom: 24px;
+}
+
+.content__title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.content .form-floating:focus-within {
+  z-index: 2;
+}
+
+.content .cpf-input {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.content .password-input {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
